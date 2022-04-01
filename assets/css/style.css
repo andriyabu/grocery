@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito: wght@200;300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
 
 :root{
     --green:#27ae60;
@@ -207,7 +207,7 @@ section{
 }
 
 .banner-container .banner{
-    flex-direction: 1 1 40rem;
+    flex: 1 1 40rem;
     height: 25rem;
     overflow: hidden;
     position: relative;
@@ -232,7 +232,7 @@ section{
 }
 
 .banner-container .banner .content p{
-    font: 2rem;
+    font-size: 2rem;
     color: #333;
 }
 
@@ -242,8 +242,9 @@ section{
 
 .category .box-container{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap:wrap;
     gap: 1.5rem;
+    /* justify-content: space-between; */
 }
 
 .category .box-container .box{
@@ -252,6 +253,8 @@ section{
     text-align: center;
     padding: 2rem 1rem;
     flex:1 1 25rem;
+    overflow: hidden;
+    position: relative;
     /* box-sizing: border-box; */
 }
 
@@ -381,10 +384,59 @@ section{
     display: block;
 }
 
+.deal{
+    background: url(../images/deal-bg.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
 
+.deal .content{
+    max-width: 50rem;
+}
 
+.deal .content .title{
+    font-size: 4rem;
+    color: var(--black);
+}
 
+.deal .content p{
+    font-size: 1.7rem;
+    padding: 1rem 0;
+    color: #333;
+}
 
+.deal .content .count-down{
+    display: flex;
+    gap: 1rem;
+    padding: .5rem 0;
+}
+
+.deal .content .count-down .box{
+    width: 9rem;
+    text-align: center;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    border: .1rem solid rgba(0,0,0,.3);
+}
+
+.deal .content .count-down .box h3{
+    color: var(--black);
+    background: #fff;
+    height: 7rem;
+    line-height: 7rem;
+    width: 100%;
+    font-size: 5rem;
+}
+
+.deal .content .count-down .box span{
+    display: block;
+    background: var(--black);
+    color: #fff;
+    width: 100%;
+    padding: .5rem;
+    font-size: 2rem;
+}
 
 
 
@@ -455,6 +507,19 @@ section{
     .home .content h3{
         font-size: 4rem;
     }
+
+    .deal{
+        background-position: left;
+    }
+
+    .deal .content{
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .deal .content .count-down{
+        justify-content: center;
+    }
 }
 
 
@@ -479,5 +544,13 @@ section{
 
     .logo{
         font-size: 4rem;
+    }
+
+    .deal .content .count-down .box h3{
+        font-size: 4rem;
+    }
+
+    .deal .content .count-down .box span{
+        font-size: 1.5rem;
     }
 }
