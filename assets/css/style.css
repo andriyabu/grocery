@@ -41,7 +41,7 @@ section{
     margin-top: 1rem;
     background: var(--green);
     color: #fff;
-    padding: 1.5rem 3rem;
+    padding: 1rem 2rem;
     font-size: 1.7rem;
     text-align: center;
     cursor: pointer;
@@ -49,6 +49,22 @@ section{
 
 .btn:hover{
     background: var(--black);
+    transform: scale(1.1);
+}
+
+.heading{
+    text-align: center;
+    color: var(--black);
+    text-transform: uppercase;
+    padding: 1rem;
+    font-size: 3.5rem;
+    /* border-bottom: .1rem solid #333; */
+    margin-bottom: 2rem;
+}
+
+.heading span{
+    color: var(--green);
+    text-transform: uppercase;
 }
 .header-1{
     background: #eee;
@@ -187,6 +203,7 @@ section{
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
+    justify-content: center;
 }
 
 .banner-container .banner{
@@ -223,7 +240,40 @@ section{
     transform: scale(1.5) rotate(-5deg);
 }
 
+.category .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
 
+.category .box-container .box{
+    border: .1rem solid rgba(0,0,0,.2);
+    border-radius: .5rem;
+    text-align: center;
+    padding: 2rem 1rem;
+    flex:1 1 25rem;
+    /* box-sizing: border-box; */
+}
+
+.category .box-container .box img{
+    width: 20rem;
+    margin: .5rem 0;
+}
+
+.category .box-container .box h3{
+    font-size: 3.5rem;
+    color: var(--black);
+}
+
+.category .box-container .box p{
+    font-size: 2rem;
+    color: #666;
+    padding: 5rem 0;
+}
+
+.category .box-container .box .btn{
+    display: block;
+}
 
 
 
@@ -303,6 +353,11 @@ section{
     html{
         font-size: 50%;
     }
+
+    .heading{
+        font-size: 3rem;
+    }
+
 
     .header-1{
         flex-flow: column;
